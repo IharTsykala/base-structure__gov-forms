@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/base-structure__gov-forms/static/css/main.7ad46bdb.chunk.css",
+    "main.js": "/base-structure__gov-forms/static/js/main.90f38fe8.chunk.js",
+    "main.js.map": "/base-structure__gov-forms/static/js/main.90f38fe8.chunk.js.map",
+    "runtime-main.js": "/base-structure__gov-forms/static/js/runtime-main.bde3746c.js",
+    "runtime-main.js.map": "/base-structure__gov-forms/static/js/runtime-main.bde3746c.js.map",
+    "static/css/2.0d383db3.chunk.css": "/base-structure__gov-forms/static/css/2.0d383db3.chunk.css",
+    "static/js/2.eab1b666.chunk.js": "/base-structure__gov-forms/static/js/2.eab1b666.chunk.js",
+    "static/js/2.eab1b666.chunk.js.map": "/base-structure__gov-forms/static/js/2.eab1b666.chunk.js.map",
+    "index.html": "/base-structure__gov-forms/index.html",
+    "precache-manifest.95bbe39e0bdf9a6f3086e16351c946a4.js": "/base-structure__gov-forms/precache-manifest.95bbe39e0bdf9a6f3086e16351c946a4.js",
+    "service-worker.js": "/base-structure__gov-forms/service-worker.js",
+    "static/css/2.0d383db3.chunk.css.map": "/base-structure__gov-forms/static/css/2.0d383db3.chunk.css.map",
+    "static/css/main.7ad46bdb.chunk.css.map": "/base-structure__gov-forms/static/css/main.7ad46bdb.chunk.css.map",
+    "static/js/2.eab1b666.chunk.js.LICENSE.txt": "/base-structure__gov-forms/static/js/2.eab1b666.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bde3746c.js",
+    "static/css/2.0d383db3.chunk.css",
+    "static/js/2.eab1b666.chunk.js",
+    "static/css/main.7ad46bdb.chunk.css",
+    "static/js/main.90f38fe8.chunk.js"
+  ]
+}
