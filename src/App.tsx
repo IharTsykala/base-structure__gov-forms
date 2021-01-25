@@ -8,7 +8,7 @@ import { createStore, applyMiddleware } from "redux"
 import { composeWithDevTools } from "redux-devtools-extension"
 import rootReducer from "./Redux/index"
 import createSagaMiddleware from "redux-saga"
-import formSaga from "./Redux/store/form/form.saga"
+import stepSaga from "./Redux/store/step/step.saga"
 import Navbar from "./Components/Navbar/Navbar"
 import Footer from "./Components/Footer/Footer"
 
@@ -21,7 +21,7 @@ const store = createStore(
   )
 )
 
-sagaMiddleware.run(formSaga)
+sagaMiddleware.run(stepSaga)
 
 const App: React.FC = () => (
   <Provider store={store}>

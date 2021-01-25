@@ -1,23 +1,34 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { connect } from "react-redux"
-import fakeArraySteps from "../../../services/fakeArray"
+// import fakeArraySteps from "../../../services/fakeArray"
 import StepItem from "../../../Components/StepItem/StepItem"
+import { getArraySteps } from "../../../Redux/store/step/step.actions"
 import { StepInterface } from "../../../Redux/InterfacesEntity/stepItem.interface"
 
 type FormPageMenuProps = {
+  arraySteps: any,
   currentStep: string,
   dispatch: any,
 }
 
 const FormPageMenu: React.FunctionComponent<FormPageMenuProps> = ({
+  arraySteps,
   currentStep,
   dispatch,
 }) => {
-  console.log(fakeArraySteps)
+  useEffect(() => {
+    dispatch(getArraySteps(""))
+  }, [dispatch])
+
+  useEffect(() => {
+    console.log(arraySteps)
+  }, [arraySteps])
+
   return (
     <div className={"form-page__menu"}>
-      {fakeArraySteps.length &&
-        fakeArraySteps.map((item: any) => (
+      {arraySteps &&
+        arraySteps.length &&
+        arraySteps.map((item: any) => (
           <StepItem
             key={item.id}
             id={item.id}
@@ -31,6 +42,7 @@ const FormPageMenu: React.FunctionComponent<FormPageMenuProps> = ({
 }
 
 const mapStateToProps = (state: any) => ({
+  arraySteps: state.step.arraySteps,
   currentStep: state.step.currentStep,
 })
 

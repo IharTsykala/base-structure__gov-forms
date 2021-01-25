@@ -4,7 +4,7 @@ import { setCurrentStep } from "../../Redux/store/step/step.actions"
 type StepItemProps = {
   id: string,
   name: string,
-  currentStep: string,
+  currentStep: any,
   dispatch: any,
 }
 
@@ -15,16 +15,16 @@ const StepItem: React.FunctionComponent<StepItemProps> = ({
   dispatch,
 }) => {
   const handleChangeStep = (e: any) => {
-    dispatch(setCurrentStep(id))
+    // dispatch(setCurrentStep(id))
   }
   return (
-    <div className={"step-item"}>
-      <p
-        className={`step-item__name ${id === currentStep ? "selected" : ""}`}
-        onClick={(e) => handleChangeStep(e)}
-      >
-        {name}
-      </p>
+    <div
+      className={`step-item ${
+        id === currentStep.id ? "step-item_selected" : ""
+      }`}
+      onClick={(e) => handleChangeStep(e)}
+    >
+      <p className={`step-item__name`}>{name}</p>
     </div>
   )
 }

@@ -3,11 +3,15 @@ import { ActionTypes } from "./step.actions"
 import { Action } from "../../interfacesAction/action.interface"
 
 export interface State {
-  currentStep: string;
+  arraySteps: any;
+  currentStep: {};
+  indexCurrentStep: number | null;
 }
 
 const initialState: State = {
-  currentStep: "step1",
+  arraySteps: [],
+  currentStep: { id: "step1" },
+  indexCurrentStep: 0,
 }
 
 export const stepReducer = (
@@ -15,10 +19,20 @@ export const stepReducer = (
   action: Action<number>
 ) => {
   switch (action.type) {
-  case ActionTypes.SET_CURRENT_STEP:
+  case ActionTypes.SET_ARRAY_STEPS:
     return {
       ...state,
-      currentStep: action.payload,
+      arraySteps: action.payload,
+    }
+  case ActionTypes.SET_CURRENT_STEP:    
+    return {
+      ...state,
+      currentStep: state.arraySteps[action.payload!],
+    }
+  case ActionTypes.SET_INDEX_CURRENT_STEP:
+    return {
+      ...state,
+      indexCurrentStep: action.payload,
     }
   default:
     return state
