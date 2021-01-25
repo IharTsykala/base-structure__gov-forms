@@ -24,9 +24,10 @@ export const stepReducer = (
       ...state,
       arraySteps: action.payload,
     }
-  case ActionTypes.SET_CURRENT_STEP:    
+  case ActionTypes.SET_CURRENT_STEP:
     return {
       ...state,
+      // eslint-disable-next-line prettier/prettier
       currentStep: state.arraySteps[action.payload!],
     }
   case ActionTypes.SET_INDEX_CURRENT_STEP:
